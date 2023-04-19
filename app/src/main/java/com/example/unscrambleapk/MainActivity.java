@@ -18,13 +18,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
         mainViewModel = new ViewModelProvider(this).get(MainViewModel.class);
-        binding.setViewMod(mainViewModel);
+
+        binding.setVar(mainViewModel);
         context = getApplicationContext();
+
         binding.button.setOnClickListener((v) -> {
             mainViewModel.check(context,String.valueOf(binding.editTextTextPersonName.getText()));
         });
+
         binding.setLifecycleOwner(this);
         mainViewModel.generateString();
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools" >
     <data>
         <variable
-            name="ViewMod"
+            name="var"
             type="com.example.unscrambleapk.MainViewModel" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,7 +16,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(ViewMod.Str)}"
+            android:text="@{String.valueOf(var.Str)}"
             android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
